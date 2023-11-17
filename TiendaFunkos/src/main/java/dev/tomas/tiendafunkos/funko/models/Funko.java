@@ -1,5 +1,6 @@
 package dev.tomas.tiendafunkos.funko.models;
 
+import dev.tomas.tiendafunkos.categoria.models.Categoria;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
