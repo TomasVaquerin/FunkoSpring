@@ -15,7 +15,7 @@ public interface CategoriaService {
 
     void deleteById(Long id);
 
-    Categoria findByTipo(CategoriaDto.tipoCategoria tipoCategoriaDto);
+    Categoria findByTipo(String tipoCategoria);
 
     Categoria update(Long id, CategoriaDto categoriaDto);
 
