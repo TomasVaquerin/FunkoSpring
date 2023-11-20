@@ -1,6 +1,8 @@
 package dev.tomas.tiendafunkos.categoria.models;
 
+import dev.tomas.tiendafunkos.categoria.dto.CategoriaDto;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -30,9 +32,15 @@ public class Categoria {
     private LocalDateTime fechaUpdated = LocalDateTime.now();
 
 
+    @NotNull
     private tipoCategoria tipoCategoria;
+
+    @Column(columnDefinition = "boolean default false")
+    private Boolean isDeleted = false;
 
     public enum tipoCategoria{
         SERIE, DISNEY, SUPERHEROES, PELICULA, OTROS
     }
+
+
 }

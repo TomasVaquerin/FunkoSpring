@@ -20,6 +20,6 @@ public interface CategoriaService {
     Categoria update(Long id, CategoriaDto categoriaDto);
 
 
-    Page<Categoria> findAll(Optional<Boolean> tipoCategoria, Pageable pageable);
+    Page<Categoria> findAll(Optional<String> tipoCategoria, Optional<Boolean> isDeleted, Pageable pageable);
 
 }

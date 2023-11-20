@@ -14,7 +14,8 @@ public class CategoriaMapper {
                 null,
                 LocalDateTime.now(),
                 LocalDateTime.now(),
-                categoriaDto.getTipoCategoria()
+                categoriaDto.getTipoCategoria(),
+                categoriaDto.getIsDeleted() != null ? categoriaDto.getIsDeleted() : false
         );
     }
 
@@ -23,8 +24,8 @@ public class CategoriaMapper {
                 categoria.getId(),
                 categoria.getFechaCreated(),
                 LocalDateTime.now(),
-                dto.getTipoCategoria() != null ? dto.getTipoCategoria() : categoria.getTipoCategoria()
-
+                dto.getTipoCategoria() != null ? dto.getTipoCategoria() : categoria.getTipoCategoria(),
+                dto.getIsDeleted() != null ? dto.getIsDeleted() : categoria.getIsDeleted()
         );
     }
 }
