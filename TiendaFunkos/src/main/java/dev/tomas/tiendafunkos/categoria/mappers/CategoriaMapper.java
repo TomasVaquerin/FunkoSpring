@@ -15,7 +15,7 @@ public class CategoriaMapper {
                 LocalDateTime.now(),
                 LocalDateTime.now(),
                 categoriaDto.getTipoCategoria(),
-                categoriaDto.getIsDeleted() != null ? categoriaDto.getIsDeleted() : false
+                categoriaDto.getIsDeleted() != null && categoriaDto.getIsDeleted()
         );
     }
 

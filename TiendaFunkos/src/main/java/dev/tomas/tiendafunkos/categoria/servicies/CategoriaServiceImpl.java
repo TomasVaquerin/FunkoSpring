@@ -95,4 +95,12 @@ public class CategoriaServiceImpl implements CategoriaService{
 
         return categoriaRepository.findAll(criterio, pageable);
     }
+
+    @Override
+    public void findByTipoCategoria(Categoria.tipoCategoria tipoCategoria) {
+        log.info("Buscando categoría por tipo: " + tipoCategoria);
+        categoriaRepository.findByTipoCategoria(tipoCategoria).orElseThrow(() -> new CategoriaNotFound(String.valueOf(tipoCategoria)));
+    }
+
+
 }

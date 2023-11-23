@@ -4,12 +4,14 @@ import dev.tomas.tiendafunkos.categoria.models.Categoria;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
@@ -18,10 +20,9 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "FUNKOS")
 public class Funko {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     @NotBlank(message = "El nombre no puede estar vacío")
     private String nombre;
@@ -51,8 +52,12 @@ public class Funko {
     @Builder.Default
     private LocalDateTime fechaUpdated = LocalDateTime.now();
 
+    @Column(columnDefinition = "boolean default false")
+    private Boolean isDeleted = false;
+
     @ManyToOne
     @JoinColumn
+    @NotNull(message = "La categoría no puede ser nula")
     private Categoria categoria;
 
 }

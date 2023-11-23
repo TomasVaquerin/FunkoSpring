@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c89e6373-f563-4666-aabd-d9005daa2f2b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/database/tienda.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/controllers/FunkoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/dto/FunkoDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/exceptions/FunkoBadRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/exceptions/FunkoBadUuid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/exceptions/FunkoConflict.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/exceptions/FunkoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/exceptions/FunkoNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/mapper/FunkoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/repositories/FunkoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/services/FunkoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/services/FunkoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/notifications/config/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/notifications/config/WebSocketHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/notifications/config/WebSocketSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/notifications/dto/FunkoNotificationDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/notifications/mapper/FunkoNotificationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/notifications/models/Notificacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/storage/FileSystemStorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/storage/StorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/storage/config/StorageConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/storage/controllers/StorageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/storage/exceptions/StorageBadRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/storage/exceptions/StorageException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/storage/exceptions/StorageInternal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/storage/exceptions/StorageNotFound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/categoria/mappers/CategoriaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/categoria/mappers/CategoriaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/categoria/servicies/CategoriaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/categoria/servicies/CategoriaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/categoria/servicies/CategoriaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/categoria/servicies/CategoriaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/models/Funko.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TiendaFunkos/src/main/java/dev/tomas/tiendafunkos/funko/models/Funko.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2YUotAKhR0MhTdJtnYp95yMcWm1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "android.gradle.sync.needed": "true",
+    "git-widget-placeholder": "<unknown>",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="GetCloApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="GetClo.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.getclo.GetCloApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c89e6373-f563-4666-aabd-d9005daa2f2b" name="Changes" comment="" />
+      <created>1700589734140</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700589734140</updated>
+      <workItem from="1700589735242" duration="2292000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -22,4 +22,5 @@ public interface CategoriaService {
 
     Page<Categoria> findAll(Optional<String> tipoCategoria, Optional<Boolean> isDeleted, Pageable pageable);
 
+    void findByTipoCategoria(Categoria.tipoCategoria tipoCategoria);
 }
