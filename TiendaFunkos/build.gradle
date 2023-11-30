@@ -49,6 +49,9 @@ dependencies {
 // Para pasar a XML los responses, negocacion de contenido
     implementation('com.fasterxml.jackson.dataformat:jackson-dataformat-xml')
 
+
+    implementation('com.fasterxml.jackson.datatype:jackson-datatype-jsr310')
+
 // Dependencias para Test
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 

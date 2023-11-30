@@ -7,10 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class CategoriaDto {
     @NotNull
-    private Categoria.tipoCategoria tipoCategoria;
-    private  Boolean isDeleted;
+    private final String tipoCategoria;
+    private final Boolean isDeleted;
 }

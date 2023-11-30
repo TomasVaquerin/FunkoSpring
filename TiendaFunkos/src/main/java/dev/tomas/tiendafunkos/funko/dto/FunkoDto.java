@@ -24,7 +24,7 @@ public class FunkoDto {
     private String imagen;
 
     @NotNull
-    private Categoria categoria;
+    private String categoria;
 
     @NotNull
     private Boolean isDeleted;

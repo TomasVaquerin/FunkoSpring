@@ -1,16 +1,23 @@
 package dev.tomas.tiendafunkos.categoria.controllers;
 
 import dev.tomas.tiendafunkos.categoria.dto.CategoriaDto;
+import dev.tomas.tiendafunkos.categoria.exceptions.CategoriaConflict;
+import dev.tomas.tiendafunkos.categoria.exceptions.CategoriaNotFound;
 import dev.tomas.tiendafunkos.categoria.models.Categoria;
 import dev.tomas.tiendafunkos.categoria.servicies.CategoriaService;
+
 import dev.tomas.tiendafunkos.utils.pageresponse.PageResponse;
+
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -72,5 +79,15 @@ public class CategoriaController {
         return ResponseEntity.ok(PageResponse.of(categoriaService.findAll(tipoCategoria, isDeleted, pageable), sortBy, direction));
     }
 
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(CategoriaNotFound.class)
+    public ResponseEntity<String> handleValidationExceptions(CategoriaNotFound ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
 
+    @ResponseStatus(HttpStatus.CONFLICT)
+    @ExceptionHandler(CategoriaConflict.class)
+    public ResponseEntity<String> handleValidationExceptions(CategoriaConflict ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
 }

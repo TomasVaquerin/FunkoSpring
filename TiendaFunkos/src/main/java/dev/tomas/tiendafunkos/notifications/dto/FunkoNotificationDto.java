@@ -9,9 +9,9 @@ public record FunkoNotificationDto(
         Double precio,
         Integer stock,
         String imagen,
-        LocalDateTime fechaCreated,
-        LocalDateTime fechaUpdated,
-        Boolean isDeleted,
-        String categoria
+        String fechaCreated,
+        String fechaUpdated,
+        String categoria,
+        Boolean isDeleted
 ) {
 }

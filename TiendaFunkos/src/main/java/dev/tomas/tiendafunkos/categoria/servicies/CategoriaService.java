@@ -15,12 +15,9 @@ public interface CategoriaService {
 
     void deleteById(Long id);
 
-    Categoria findByTipo(String tipoCategoria);
-
     Categoria update(Long id, CategoriaDto categoriaDto);
-
 
     Page<Categoria> findAll(Optional<String> tipoCategoria, Optional<Boolean> isDeleted, Pageable pageable);
 
-    void findByTipoCategoria(Categoria.tipoCategoria tipoCategoria);
+    Categoria findByTipoCategoria(String tipoCategoria);
 }

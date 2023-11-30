@@ -24,6 +24,7 @@ public class Funko {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
+    @Column(unique = true, name = "NOMBRE")
     @NotBlank(message = "El nombre no puede estar vacío")
     private String nombre;
 
@@ -33,7 +34,7 @@ public class Funko {
     private Double precio = 0.0;
 
     @Min(value = 0, message = "El stock no puede ser negativo")
-    @Column(columnDefinition = "integer default 0")
+    @Column(columnDefinition = "integer default 0", name = "CANTIDAD")
     @Builder.Default
     private Integer stock = 0;
 
@@ -52,12 +53,11 @@ public class Funko {
     @Builder.Default
     private LocalDateTime fechaUpdated = LocalDateTime.now();
 
-    @Column(columnDefinition = "boolean default false")
+    @Column(columnDefinition = "boolean default false", name = "ISDELETED")
     private Boolean isDeleted = false;
 
     @ManyToOne
-    @JoinColumn
-    @NotNull(message = "La categoría no puede ser nula")
+    @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
 }

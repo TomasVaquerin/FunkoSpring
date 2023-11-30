@@ -12,7 +12,7 @@ import java.util.Optional;
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Long>, JpaSpecificationExecutor<Categoria> {
 
-    Optional<Categoria> findByTipoCategoria(Categoria.tipoCategoria tipoCategoria);
+    Optional<Categoria> findByTipoCategoriaIgnoreCase(String tipoCategoria);
 
 
     @Query("SELECT CASE WHEN COUNT(p) > 0 THEN true ELSE false END FROM Funko p WHERE p.categoria.id = :id")

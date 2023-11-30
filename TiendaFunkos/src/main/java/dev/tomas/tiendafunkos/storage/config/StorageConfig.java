@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class StorageConfig {
     private final StorageService storageService;
 
-    @Value("/imagenes")
+    @Value("/imagen")
     private String deleteAll;
 
     @Autowired

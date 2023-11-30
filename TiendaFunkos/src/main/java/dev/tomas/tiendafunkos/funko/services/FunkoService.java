@@ -12,13 +12,13 @@ import java.util.UUID;
 public interface FunkoService {
 
     Funko save (FunkoDto funkoDto);
-    Funko findById (UUID uuid);
+    Funko findById (String uuid);
 
-    void deleteById (UUID uuid);
+    void deleteById (String uuid);
 
-    Funko update (UUID uuid, FunkoDto funkoDto);
+    Funko update (String uuid, FunkoDto funkoDto);
 
-    Funko updateImage (UUID uuid, MultipartFile image);
+    Funko updateImage (String uuid, MultipartFile image);
 
     Page<Funko> findAll(Optional<String> nombre,
                         Optional<Double> precio,

@@ -9,5 +9,7 @@ import java.util.UUID;
 
 public interface FunkoRepository extends JpaRepository<Funko, UUID>, JpaSpecificationExecutor<Funko> {
 
+    Optional<Funko> findById (UUID uuid);
+
     Optional<Object> findByNombreEqualsIgnoreCase(String nombre);
 }

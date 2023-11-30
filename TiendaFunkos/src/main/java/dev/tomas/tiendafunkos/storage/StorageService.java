@@ -29,7 +29,7 @@ public interface StorageService {
      * @param file fichero a almacenar
      * @return nombre del fichero almacenado
      */
-    String store(MultipartFile file);
+    String store(MultipartFile file, String id);
 
     /**
      * Devuelve un Stream de todos los ficheros almacenados

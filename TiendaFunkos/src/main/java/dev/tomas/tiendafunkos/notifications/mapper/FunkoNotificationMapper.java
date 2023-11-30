@@ -1,6 +1,5 @@
 package dev.tomas.tiendafunkos.notifications.mapper;
 
-
 import dev.tomas.tiendafunkos.funko.models.Funko;
 import dev.tomas.tiendafunkos.notifications.dto.FunkoNotificationDto;
 import org.springframework.stereotype.Component;
@@ -14,10 +13,10 @@ public class FunkoNotificationMapper {
                 funko.getPrecio(),
                 funko.getStock(),
                 funko.getImagen(),
-                funko.getFechaCreated(),
-                funko.getFechaUpdated(),
-                funko.getIsDeleted(),
-                funko.getCategoria().getTipoCategoria().toString()
+                funko.getFechaCreated().toString(),
+                funko.getFechaUpdated().toString(),
+                funko.getCategoria().getTipoCategoria(),
+                funko.getIsDeleted()
         );
     }
 }

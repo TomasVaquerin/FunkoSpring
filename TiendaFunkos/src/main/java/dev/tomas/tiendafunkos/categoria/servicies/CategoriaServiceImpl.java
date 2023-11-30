@@ -34,7 +34,7 @@ public class CategoriaServiceImpl implements CategoriaService{
     @Override
     public Categoria save(CategoriaDto categoriaDto) {
         log.info("Guardando categoria: ", categoriaDto);
-        categoriaRepository.findByTipoCategoria(categoriaDto.getTipoCategoria()).ifPresent(c -> {
+        categoriaRepository.findByTipoCategoriaIgnoreCase(categoriaDto.getTipoCategoria()).ifPresent(c -> {
             throw new CategoriaConflict(String.valueOf(categoriaDto.getTipoCategoria()));
         });
         return categoriaRepository.save(categoriaMapper.toCategoria(categoriaDto));
@@ -60,22 +60,16 @@ public class CategoriaServiceImpl implements CategoriaService{
     }
 
     @Override
-    public Categoria findByTipo(String tipoCategoria) {
-        log.info("Buscando categoría por tipo: " + tipoCategoria);
-        return categoriaRepository.findByTipoCategoria(Categoria.tipoCategoria.valueOf(tipoCategoria)).orElseThrow(() -> new CategoriaNotFound(tipoCategoria));
-    }
-
-    @Override
     public Categoria update(Long id, CategoriaDto categoriaDto) {
         log.info("Actualizando categoría: " + categoriaDto);
         Categoria categoriaActual = findById(id);
-
-        categoriaRepository.findByTipoCategoria(categoriaDto.getTipoCategoria()).ifPresent(c -> {
+        // No debe existir una con el mismo nombre, y si existe soy yo mismo
+        categoriaRepository.findByTipoCategoriaIgnoreCase(categoriaDto.getTipoCategoria()).ifPresent(c -> {
             if (!c.getId().equals(id)) {
-                throw new CategoriaConflict("Ya existe una categoría con el tipo " + categoriaDto.getTipoCategoria());
+                throw new CategoriaConflict("Ya existe una categoría con el nombre " + categoriaDto.getTipoCategoria());
             }
         });
-
+        // Actualizamos los datos
         return categoriaRepository.save(categoriaMapper.toCategoria(categoriaDto, categoriaActual));
     }
 
@@ -97,9 +91,9 @@ public class CategoriaServiceImpl implements CategoriaService{
     }
 
     @Override
-    public void findByTipoCategoria(Categoria.tipoCategoria tipoCategoria) {
+    public Categoria findByTipoCategoria(String tipoCategoria) {
         log.info("Buscando categoría por tipo: " + tipoCategoria);
-        categoriaRepository.findByTipoCategoria(tipoCategoria).orElseThrow(() -> new CategoriaNotFound(String.valueOf(tipoCategoria)));
+        return categoriaRepository.findByTipoCategoriaIgnoreCase(tipoCategoria).orElseThrow(() -> new CategoriaNotFound(tipoCategoria));
     }
 
 

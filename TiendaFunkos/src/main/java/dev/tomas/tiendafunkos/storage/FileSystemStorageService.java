@@ -43,7 +43,7 @@ public class FileSystemStorageService implements StorageService {
     private final Path rootLocation;
 
 
-    public FileSystemStorageService(@Value("/imagenes") String path) {
+    public FileSystemStorageService(@Value("imagen") String path) {
         this.rootLocation = Paths.get(path);
     }
 
@@ -57,11 +57,13 @@ public class FileSystemStorageService implements StorageService {
      * @throws StorageBadRequest si el fichero contiene caracteres no permitidos
      */
     @Override
-    public String store(MultipartFile file) {
+    public String store(MultipartFile file, String id) {
         String filename = StringUtils.cleanPath(file.getOriginalFilename());
         String extension = StringUtils.getFilenameExtension(filename);
-        String justFilename = filename.replace("." + extension, "");
-        String storedFilename = System.currentTimeMillis() + "_" + justFilename + "." + extension;
+        String storedFilename =  id + "." + extension;
+
+
+        log.info(filename);
 
         try {
             if (file.isEmpty()) {

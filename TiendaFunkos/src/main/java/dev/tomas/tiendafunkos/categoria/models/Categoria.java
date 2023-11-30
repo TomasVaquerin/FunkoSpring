@@ -21,7 +21,6 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Temporal(TemporalType.TIMESTAMP)
     @Column(updatable = false, nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     @Builder.Default
     private LocalDateTime fechaCreated = LocalDateTime.now();
@@ -33,14 +32,10 @@ public class Categoria {
 
 
     @NotNull
-    private tipoCategoria tipoCategoria;
+    @Column(unique = true, name = "TIPOCATEGORIA")
+    private String tipoCategoria;
 
-    @Column(columnDefinition = "boolean default false")
+    @Column(columnDefinition = "boolean default false", name = "ISDELETED")
     private Boolean isDeleted = false;
-
-    public enum tipoCategoria{
-        SERIE, DISNEY, SUPERHEROES, PELICULA, OTROS
-    }
-
 
 }
